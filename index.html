@@ -38,6 +38,8 @@
 </body>
 <table class="table table-dark table-striped"></table>
 <script type="text/javascript">
+    setInterval(Upload,15000);
+    
     function Upload() {
         var fileUpload = document.getElementById("fileUpload");
         var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.csv|.txt)$/;
