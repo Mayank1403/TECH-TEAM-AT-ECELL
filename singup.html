@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <link rel="stylesheet" href="bootstrap-4.3.1/dist/css/bootstrap.css">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        
+        <style>
+            #heading{
+                margin-left: 305px;
+                color: #D4AF37;
+                width: 350px;
+                border:1px solid #86592d;
+                border-radius: 20px;
+                background-color:  black;
+                margin-top: 20px;
+            }
+            #gap{
+            
+                min-height: 200px;
+            }
+            #login{
+                border: 1px solid #86592d;
+                background-color:   #ffe066
+                ;
+                border-radius: 10px;
+                min-height: 300px;
+            }
+            body{
+                
+                color: #663300;
+                background-repeat:no-repeat;
+                background-size: cover;
+                
+            }
+            #logo{
+                margin-left: 370px;
+                
+            }
+            #formreg{
+                
+                border: 1px solid black;
+                background-color: cornsilk;
+            }
+            .form-popup{
+                display: none;
+                border: 1px solid gold;
+                border-radius: 10px;
+                background-color: beige;
+                
+            }
+        </style>
+        <script>
+
+            function signInAlert(){
+                $.confirm({
+                    theme: 'supervan'
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+           
+            <div class="row">
+             
+                <div class="col col-lg-4 offset-lg-4" id="login">
+                    <p class="h1 text-center">Sign Up</p>
+                    <form method = "POST" action = "signup.php">
+                            <div class="form-group">
+                            
+                                    <input type="name" placeholder="Full Name" class="form-control" name = "name"required>
+                                </div>
+                                
+                        <div class="form-group">
+                            
+                            <input type="email" placeholder="Email" class="form-control" name ="mail" required>
+                        </div>
+                        <div class="form-group">
+                            
+                                <input type="username" placeholder="Username" class="form-control" name ="uname" required>
+                            </div>
+                            
+                        <div class="form-group">
+                            
+                            <input type="password" class="form-control" placeholder="Enter password" name = "pwd"required>
+                            <br>
+                            <center>
+                            
+                                <button class=" btn btn-primary tex-center">Sign Up</button>
+                            <br><br>
+                            <div class="card-footer">
+                                <div style="color: #626C66;" class="d-flex justify-content-center links">
+                                    Have an account?<a href="login.html">Login</a>
+                                </div>
+                                
+                            </div>
+                             </center> 
+                          
+                        </div>
+                    </form>
+                    
+                </div><br><br>
+               
+                
+            </div>
+        </div>
+           
+                
+         
+        
+   </body>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+<script type="text/javascript">
+          
+    $("form").submit(function(e) {
+        
+        var error = "";
+        
+        if ($("#name").val() == "") {
+            
+            error += "The fullname field is required.<br>"
+            
+        }
+        
+        if ($("#username").val() == "") {
+            
+            error += "The username field is required.<br>"
+            
+        }
+
+        if ($("#password").val() == "") {
+            
+            error += "The password field is required.<br>"
+            
+        }
+
+        if ($("#email").val() == "") {
+            
+            error += "The email field is required.<br>"
+            
+        }
+        
+        if (error != "") {
+            
+           $("#form-error").html('<div class="alert alert-danger" role="alert"><p><strong>There were error(s) in your form:</strong></p>' + error + '</div>');
+            
+            return false;
+            
+        } else {
+            
+            return true;
+            
+        }
+        
+    })
+    
+</script>
+</html>
+
+   
+</html>

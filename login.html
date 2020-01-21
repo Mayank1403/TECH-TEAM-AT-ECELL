@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <link rel="stylesheet" href="bootstrap-4.3.1/dist/css/bootstrap.css">
+        
+        <style>
+            #heading{
+                margin-left: 305px;
+                color: #D4AF37;
+                width: 350px;
+                border:1px solid #86592d;
+                border-radius: 20px;
+                background-color:  black;
+                margin-top: 20px;
+            }
+            #gap{
+            
+                min-height: 200px;
+            }
+            #login{
+                border: 1px solid #86592d;
+                background-color:   #ffe066
+                ;
+                border-radius: 10px;
+                min-height: 300px;
+            }
+            body{
+                
+                color: #663300;
+                background-repeat:no-repeat;
+                background-size: cover;
+                
+            }
+            #logo{
+                margin-left: 370px;
+                
+            }
+            #formreg{
+                
+                border: 1px solid black;
+                background-color: cornsilk;
+            }
+            .form-popup{
+                display: none;
+                border: 1px solid gold;
+                border-radius: 10px;
+                background-color: beige;
+                
+            }
+        </style>
+        <script>
+
+            function signInAlert(){
+                $.confirm({
+                    theme: 'supervan'
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            
+            <div class="row">
+             
+                <div class="col col-lg-4 offset-lg-4" id="login">
+                    <p class="h1 text-center">Login</p>
+                    <form method = "POST" action = "login.php">
+                        <div class="form-group">
+                            <label for="Username">Username</label>
+                            <input type="text" placeholder="Enter username" name = "uname" >
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" name = "pwd" placeholder="Enter password">
+                            <br>
+                            <input type = "submit"> 
+                            <button class="btn btn-danger text-center">Cancel</button><br><br>
+                            <div class="card-footer">
+                                <div style="color: #626C66;" class="d-flex justify-content-center links">
+                                    Don't have an account?<a href="signup.html">Sign Up</a>
+                                </div>
+                            </div>
+                          
+                        </div>
+                    </form>
+                    
+                </div><br><br>
+                
+                
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+          
+        $("form").submit(function(e) {
+            
+            var error = "";
+            
+            if ($("#name").val() == "") {
+                
+                error += "The username field is required.<br>"
+                
+            }
+    
+            if ($("#pwd").val() == "") {
+                
+                error += "The password field is required.<br>"
+                
+            }
+            
+            if (error != "") {
+                
+               $("#form-error").html('<div class="alert alert-danger" role="alert"><p><strong>There were error(s) in your form:</strong></p>' + error + '</div>');
+                
+                return false;
+                
+            } else {
+                
+                return true;
+                
+            }
+            
+        })
+        
+    </script>
+    
+</html>
