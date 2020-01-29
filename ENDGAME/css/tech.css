@@ -1,0 +1,13 @@
+#body{
+    background-color:black;
+}
+#crisis{
+    background-color: red;
+    color: #f5f5dc;
+    box-shadow: 3px 3px 4px 5px rgba(206, 32, 32, 0.5);
+    /*border-style:outset;
+    border-color: black;
+    border-width:5px;*/
+    font-family: 'Classic Console', sans-serif;
+    font-size: 3em;
+}
