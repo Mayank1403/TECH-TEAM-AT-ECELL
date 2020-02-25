@@ -8,3 +8,5 @@ for a in range(1,len(csv_file)):
 html_code=x.get_html_string()
 html_file=open('/Users/amriteshamrit/Desktop/index.html ','w')
 html_file=html_file.write(html_code)
+
+print("hsello")
